@@ -33,4 +33,5 @@ worker :  /spark/bin/spark-class org.apache.spark.deploy.worker.Worker \
 
 2. Live data analytics using MongoDB
 
+https://github.com/colaberry/ai-poc/blob/master/spark/Regression_Model_MongoDB.ipynb
 
