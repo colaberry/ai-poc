@@ -9,11 +9,6 @@ ENV SPARK_WORKER_LOG /spark/logs
 ENV SPARK_MASTER "spark://spark-master:7077"
 
 
-RUN apt-get update \
-  && apt-get upgrade -y \
-  && apt-get install -y \
-    python3.7 python3-pip
-
 COPY requirements.txt /
 RUN python3.7 -m pip install pip \
   && pip3 install -r requirements.txt

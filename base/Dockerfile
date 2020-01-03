@@ -1,14 +1,12 @@
 #FROM python:3.8.1-alpine3.11
 FROM ubuntu:18.04
 
-RUN apt-get update
-
 RUN apt-get update \
   && apt-get upgrade -y \
   && apt-get install -y \
     wget \
-    python3 \
-    python3-dev \
+    python3.7 \
+    python3-pip \
   && apt-get clean
 
 RUN wget http://mirrors.estointernet.in/apache/spark/spark-2.4.4/spark-2.4.4-bin-hadoop2.7.tgz
@@ -24,7 +22,7 @@ COPY finish-step.sh /
 #COPY worker.sh /
 #COPY submit.sh /
 
-RUN apt-get install -y curl bash default-jre python-nss 
+RUN apt-get install -y curl bash openjdk-8-jdk python-nss 
       #&& cd /css \
       #&& jar uf /spark/jars/spark-core_2.11-${SPARK_VERSION}.jar org/apache/spark/ui/static/timeline-view.css \
       

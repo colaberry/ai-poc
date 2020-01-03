@@ -10,10 +10,7 @@ ENV SPARK_APPLICATION_PYTHON_LOCATION /app/app.py
 ENV SPARK_APPLICATION_ARGS ""
 
 # Copy the requirements.txt first, for separate dependency resolving and downloading
-RUN apt-get update \
-  && apt-get upgrade -y \
-  && apt-get install -y \
-    python3.7 python3-pip
+
 
 COPY requirements.txt /app/
 RUN cd /app \
@@ -22,4 +19,7 @@ RUN cd /app \
 
 # Copy the source code
 COPY . /app
+
+ARG version=0.2
+COPY app.py /app/
 

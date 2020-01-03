@@ -2,7 +2,7 @@
 
 export SPARK_MASTER_URL=spark://${SPARK_MASTER_NAME}:${SPARK_MASTER_PORT}
 export SPARK_HOME=/spark
-
+export SPARK_SUBMIT_ARGS="--driver-memory 5g"
 /wait-for-step.sh
 
 
