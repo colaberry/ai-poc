@@ -17,7 +17,7 @@ The approach used in this POC is of 3 steps:
 
 a. Use a local spark cluster
 
-b. Use SPaek on AWS using EMR instances
+b. Use Spark on AWS using EMR instances
 
 c. Deploy the spark docker images on kubernetes to scale the cluster.
 
