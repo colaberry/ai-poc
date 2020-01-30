@@ -1,6 +1,6 @@
 # Spark Setup
-executor_mem = '5G'
-driver_mem = '5G'
+executor_mem = '10G'
+driver_mem = '10G'
 max_result = '5G'
 overhead = '10G'
 # Mongo setup
